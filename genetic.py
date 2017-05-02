@@ -61,6 +61,9 @@ def evolve(pop, retain = 1, random_select = 0.05, mutate = 0.01):
 		if count == len(graded):
 			count = 0
 		female = graded[count]
+		count = count + 1
+		if count == len(graded):
+			count = 0
 		half =  int(len(male) / 2)
 		child1 = male[:half] + female[half:]
 		child2 = female[:half] + male[half:]
